@@ -22,7 +22,6 @@ interface ReactionSelector {
 }
 
 // After creating a bot, add the token as an environment var
-const { DISCORD_BOT_TOKEN } = process.env.NEXT_PUBLIC_DISCORD;
 
 // Number of seconds to cache the API response for
 const EXPIRES_SECONDS = 60;
@@ -49,7 +48,7 @@ const CHANNELS = new Map<string, string>([
 
 const api = (url: string, opts: RequestInit = {}) => {
   const headers = new Headers(opts.headers);
-  headers.set('Authorization', `Bot ${DISCORD_BOT_TOKEN}`);
+  headers.set('Authorization', `Bot ${process.env.NEXT_PUBLIC_DISCORD}`);
   headers.set('User-Agent', 'Discord Bot (https://event-henna.vercel.app/, v0.1)');
 
   return fetch(`${API}${url}`, {
