@@ -22,7 +22,7 @@ interface ReactionSelector {
 }
 
 // After creating a bot, add the token as an environment var
-const { DISCORD_BOT_TOKEN } = `Nzk0NDk2MDMzMzIwOTkyNzY5.X-7qFw.yy8MemlpZQbw9TEVn0yW-lg8Hjc`;
+const { DISCORD_BOT_TOKEN } = `Nzk0NDk2MDMzMzIwOTkyNzY5.X-7qFw.nxRO2b1lqxvk_scCQFRYWwdmkqg`;
 
 // Number of seconds to cache the API response for
 const EXPIRES_SECONDS = 60;
