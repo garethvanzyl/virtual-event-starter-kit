@@ -34,6 +34,10 @@ export default function StageContainer({ stage, allStages }: Props) {
     refreshInterval: 5000
   });
 
+  const discord = useSWR(`/api/discord/${stage}`, {
+    refreshInterval: 1000
+  })
+
   const updatedStages = response.data || [];
   const updatedStage = updatedStages.find((s: Stage) => s.slug === stage.slug) || stage;
   const { loginStatus, mutate } = useLoginStatus();
@@ -54,6 +58,7 @@ export default function StageContainer({ stage, allStages }: Props) {
             <div className={cn(styles.bottom, styleUtils.appear, styleUtils['appear-second'])}>
               <div className={styles.messageContainer}>
                 <h2 className={styles.stageName}>{stage.name}</h2>
+                <p>{discord.data.username} -- {discord.data.content}</p>
               </div>
               <a
                 href={updatedStage.discord}
