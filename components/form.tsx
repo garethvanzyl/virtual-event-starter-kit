@@ -85,8 +85,8 @@ export default function Form({ sharePage }: Props) {
               const params = {
                 id: data.id,
                 ticketNumber: data.ticketNumber,
-                name: name,
-                username: name
+                name: 'Gareth van Zyl',
+                username: 'Gareth van Zyl'
               };
 
               if (sharePage) {
