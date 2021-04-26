@@ -12,10 +12,10 @@ function Discord(props) {
   );
   console.log(data);
   if (error) return <></>;
-  if (!data) return <div>Loading latest comments...</div>;
+  if (!data) return <div className="chatbox">Loading latest comments...</div>;
   return (
     <>
-      <div>{data.username} - {data.content}</div>   
+      <div className="chatbox">{data.username} - {data.content}</div>   
     </>
   );
 }

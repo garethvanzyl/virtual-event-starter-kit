@@ -161,3 +161,11 @@ svg circle {
   height: auto;
   clip: auto;
 }
+.chatbox {
+  text-align: left;
+  font-weight: bold;
+  width: 100%;
+  font-size: 21px;
+  margin: auto;
+  padding: auto;
+}
