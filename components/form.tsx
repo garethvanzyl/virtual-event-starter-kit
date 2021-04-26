@@ -85,8 +85,8 @@ export default function Form({ sharePage }: Props) {
               const params = {
                 id: data.id,
                 ticketNumber: data.ticketNumber,
-                name: data.name,
-                username: data.name
+                name: name,
+                username: name
               };
 
               if (sharePage) {
@@ -127,14 +127,14 @@ export default function Form({ sharePage }: Props) {
         e.preventDefault();
       }}
     >
-      <div className={styles['form-row']}>
+       <div className={styles['form-row']}>
         <label
           htmlFor="email-input-field"
           className={cn(styles['input-label'], {
             [styles.focused]: focused
           })}
         >
-          <input
+      <input
             className={styles.input}
             autoComplete="off"
             type="text"
@@ -147,6 +147,16 @@ export default function Form({ sharePage }: Props) {
             aria-label="Your name"
             required
           />
+          </label>
+          </div>
+      <div className={styles['form-row']}>
+        <label
+          htmlFor="email-input-field"
+          className={cn(styles['input-label'], {
+            [styles.focused]: focused
+          })}
+        >
+          
           <input
             className={styles.input}
             autoComplete="off"
