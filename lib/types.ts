@@ -47,6 +47,10 @@ export type Talk = {
   speaker: Speaker[];
 };
 
+export type URL = {
+  url: string;
+};
+
 export type Link = {
   url: string;
 };
