@@ -31,7 +31,7 @@ import { DATE, SITE_NAME } from '@lib/constants';
 import Form from './form';
 
 type Props = {
-  username: UserData['username'];
+  username: UserData['name'];
   ticketNumber: UserData['ticketNumber'];
   name: UserData['name'];
   sharePage?: boolean;
