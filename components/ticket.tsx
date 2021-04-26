@@ -98,7 +98,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
         <div className={cn(styleUtils.appear, styleUtils['appear-third'])}>
           {!sharePage ? (
             <TicketForm
-              defaultUsername={username}
+              defaultUsername={name}
               setTicketGenerationState={setTicketGenerationState}
             />
           ) : (
@@ -112,7 +112,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
           className={cn(styles['ticket-visual'], styleUtils.appear, styleUtils['appear-fourth'])}
         >
           <TicketVisual
-            username={username}
+            username={name}
             name={name}
             ticketNumber={ticketNumber}
             ticketGenerationState={ticketGenerationState}

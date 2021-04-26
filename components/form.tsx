@@ -33,6 +33,7 @@ type Props = {
 
 export default function Form({ sharePage }: Props) {
   const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [errorTryAgain, setErrorTryAgain] = useState(false);
   const [focused, setFocused] = useState(false);
@@ -84,8 +85,8 @@ export default function Form({ sharePage }: Props) {
               const params = {
                 id: data.id,
                 ticketNumber: data.ticketNumber,
-                name: data.name,
-                username: data.username
+                name: name,
+                username: name
               };
 
               if (sharePage) {
@@ -133,6 +134,19 @@ export default function Form({ sharePage }: Props) {
             [styles.focused]: focused
           })}
         >
+          <input
+            className={styles.input}
+            autoComplete="off"
+            type="text"
+            id="email-input-field"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
+            placeholder="Enter name to register free"
+            aria-label="Your name"
+            required
+          />
           <input
             className={styles.input}
             autoComplete="off"
