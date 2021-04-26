@@ -28,7 +28,7 @@ const EXPIRES_SECONDS = 60;
 
 // Emoji that should be selected by a whitelisted user
 // in order for this API to return the message
-const EMOJI = '📸';
+const EMOJI = ':camera_with_flash:';
 
 // Whitelisted user IDs that are allowed to add the emoji to influence this API
 const USERS = [
