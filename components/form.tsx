@@ -24,6 +24,7 @@ import styleUtils from './utils.module.css';
 import styles from './form.module.css';
 import useEmailQueryParam from '@lib/hooks/use-email-query-param';
 import { register } from '@lib/user-api';
+import 'tailwindcss/tailwind.css';
 
 type FormState = 'default' | 'loading' | 'error';
 
@@ -66,12 +67,7 @@ export default function Form({ sharePage }: Props) {
     </div>
   ) : (
     <form
-      className={cn(styles.form, {
-        [styles['share-page']]: sharePage,
-        [styleUtils.appear]: !errorTryAgain,
-        [styleUtils['appear-fifth']]: !errorTryAgain && !sharePage,
-        [styleUtils['appear-third']]: !errorTryAgain && sharePage
-      })}
+      className="form-inline"
       onSubmit={e => {
         if (formState === 'default') {
           setFormState('loading');
@@ -127,7 +123,9 @@ export default function Form({ sharePage }: Props) {
         e.preventDefault();
       }}
     >
+      
        <div className={styles['form-row']}>
+         
         <label
           htmlFor="email-input-field"
           className={cn(styles['input-label'], {
@@ -143,13 +141,14 @@ export default function Form({ sharePage }: Props) {
             onChange={e => setName(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
-            placeholder="Enter name to register free"
+            placeholder="Enter your name to register free"
             aria-label="Your name"
             required
           />
           </label>
-          </div>
-      <div className={styles['form-row']}>
+          
+
+      
         <label
           htmlFor="email-input-field"
           className={cn(styles['input-label'], {
@@ -166,19 +165,23 @@ export default function Form({ sharePage }: Props) {
             onChange={e => setEmail(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
-            placeholder="Enter email to register free"
+            placeholder="Enter your email to register free"
             aria-label="Your email address"
             required
           />
         </label>
-        <button
+        
+        </div>
+        <div className={styles['form-row']}>
+       <button
           type="submit"
           className={cn(styles.submit, styles.register, styles[formState])}
           disabled={formState === 'loading'}
         >
           {formState === 'loading' ? <LoadingDots size={4} /> : <>Register</>}
         </button>
-      </div>
+        </div>
+        
     </form>
   );
 }

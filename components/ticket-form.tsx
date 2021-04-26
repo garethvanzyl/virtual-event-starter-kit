@@ -163,7 +163,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
       }}
     >
       <div className={cn(formStyles['form-row'], ticketFormStyles['form-row'])}>
-        <button
+        {/* <button
           type="submit"
           className={cn(
             formStyles.submit,
@@ -199,8 +199,8 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
               <CheckIcon color="#fff" size={24} />
             </span>
           ) : null}
-        </button>
-        <p className={ticketFormStyles.description}>
+        </button> */}
+        {/* <p className={ticketFormStyles.description}>
           {githubEnabled ? (
             'Only public info will be used.'
           ) : (
@@ -216,7 +216,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
               </a>
             </>
           )}
-        </p>
+        </p> */}
       </div>
     </form>
   );

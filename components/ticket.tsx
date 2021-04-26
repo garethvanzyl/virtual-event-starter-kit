@@ -15,6 +15,7 @@
  */
 
 import cn from 'classnames';
+import Link from 'next/link';
 import Tilt from 'vanilla-tilt';
 import { useRef, useEffect, useState } from 'react';
 import { UserData } from '@lib/hooks/use-conf-data';
@@ -78,7 +79,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               )
             ) : (
               <>
-                You're in. <br /> Make it unique.
+                Hi {username}, <br /> you're in.
               </>
             )}
           </h2>
@@ -89,8 +90,8 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               </>
             ) : (
               <>
-                Generate a unique ticket image with <br className={styleUtils['hide-on-mobile']} />
-                your GitHub profile.
+                Thank you for signing up with this demo event. You can now proceed to the
+                main stage by <Link href="/stage/a"><a>clicking here</a></Link>.
               </>
             )}
           </p>
@@ -122,9 +123,9 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
           <>
             {username ? (
               <div>
-                <div className={styles['ticket-actions']}>
+                {/* <div className={styles['ticket-actions']}>
                   <TicketActions username={username} />
-                </div>
+                </div> */}
                 <div className={styles['ticket-copy']}>
                   <TicketCopy username={username} />
                 </div>

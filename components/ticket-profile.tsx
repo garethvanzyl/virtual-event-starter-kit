@@ -30,7 +30,7 @@ type Props = {
 export default function TicketProfile({ name, username, size = 1, ticketGenerationState }: Props) {
   return (
     <div className={styles.profile}>
-      <span
+      {/* <span
         className={cn(styles.skeleton, styles.wrapper, styles.inline, styles.rounded, {
           [styles.show]: ticketGenerationState === 'loading'
         })}
@@ -42,7 +42,7 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
             <IconAvatar />
           </span>
         )}
-      </span>
+      </span> */}
       <div className={styles.text}>
         <p
           className={cn(styles.name, {
@@ -54,11 +54,15 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
               [styles.show]: ticketGenerationState === 'loading'
             })}
           >
-            {name || username || 'Your Name'}
+            { name + ', here is your ticket.' || username + ', here is your ticket.' || 'Your Name'}
           </span>
         </p>
         <p className={styles.username}>
-          <span
+        <span className={styles.githubIcon}>
+              This demo is brought to you by Mediam.io
+            </span>
+        </p>
+         {/*  <span
             className={cn(styles.skeleton, styles.wrapper, {
               [styles.show]: ticketGenerationState === 'loading'
             })}
@@ -67,8 +71,8 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
               <GithubIcon color="var(--secondary-color)" size={20 * size} />
             </span>
             {username || <>username</>}
-          </span>
-        </p>
+          </span> */}
+        
       </div>
     </div>
   );
