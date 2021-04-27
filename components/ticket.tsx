@@ -91,7 +91,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
             ) : (
               <>
                 Thank you for signing up with this demo event. You can now proceed to the
-                main stage by <Link href="/stage/a"><a>clicking here</a></Link>.
+                main stage by <Link href="/stage/a"><a className="ticket-link">clicking here</a></Link>.
               </>
             )}
           </p>

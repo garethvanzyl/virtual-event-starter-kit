@@ -99,6 +99,16 @@
   transform: translateZ(0) translateX(-50%) rotate(90deg);
 }
 
+.ticket-link {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.ticket-lin:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   .ticket-visual {
     width: 650px;
