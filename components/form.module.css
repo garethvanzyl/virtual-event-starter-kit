@@ -82,7 +82,7 @@
 
 @media (min-width: 768px) {
   .input {
-    width: calc(100% - var(--space-32x));
+    /* width: calc(100% - var(--space-32x)); */
     padding-right: 0;
   }
 }

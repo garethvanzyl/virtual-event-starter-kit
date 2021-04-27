@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-export const SITE_URL = 'https://virtual-event-starter-kit-virid.vercel.app';
+export const SITE_URL = 'https://demo.mediam.io';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
-export const TWITTER_USER_NAME = 'vercel';
+export const TWITTER_USER_NAME = 'Mediam.o';
 export const BRAND_NAME = 'Mediam.io';
 export const SITE_NAME_MULTILINE = ['Mediam.io', 'Conf'];
-export const SITE_NAME = 'Mediam Demo Conf';
+export const SITE_NAME = 'Mediam Demo Conference';
 export const META_DESCRIPTION =
-  'This is a demo that illustrates the Mediam.io Event + platform.';
+  'This is a demo that illustrates the Mediam.io even platform.';
 export const SITE_DESCRIPTION =
-  'This is a demo that illustrates the Mediam.io Event + platform.';
+  'This is a demo that illustrates the Mediam.io event platform.';
 export const DATE = 'May 27, 2021';
 export const SHORT_DATE = 'Oct 27 - 9:00am PST';
 export const FULL_DATE = 'Oct 27th 9am Pacific Time (GMT-7)';

@@ -141,7 +141,7 @@ export default function Form({ sharePage }: Props) {
             onChange={e => setName(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
-            placeholder="Enter your name to register free"
+            placeholder="Enter your name to register"
             aria-label="Your name"
             required
           />
@@ -165,7 +165,7 @@ export default function Form({ sharePage }: Props) {
             onChange={e => setEmail(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
-            placeholder="Enter your email to register free"
+            placeholder="Enter your email to register"
             aria-label="Your email address"
             required
           />
