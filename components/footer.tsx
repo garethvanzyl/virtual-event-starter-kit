@@ -46,8 +46,6 @@ export default function Footer() {
           rights reserved.
         </div>
         <div className={styles['footer-center-group']}>
-          
-          <div className={styles['footer-separator']} />
           <p className={styles['footer-paragraph']}>
             <a
               href={CODE_OF_CONDUCT}
