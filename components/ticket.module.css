@@ -103,7 +103,7 @@
   text-decoration: underline;
   font-weight: bold;
 }
-.ticket-lin:hover {
+.ticket-link:hover {
   color: white;
   font-weight: bold;
   text-decoration: underline;
