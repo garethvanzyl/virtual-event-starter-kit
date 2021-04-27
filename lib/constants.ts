@@ -25,7 +25,7 @@ export const META_DESCRIPTION =
 export const SITE_DESCRIPTION =
   'This is a demo that illustrates the Mediam.io event platform.';
 export const DATE = 'May 27, 2021';
-export const SHORT_DATE = 'Oct 27 - 9:00am PST';
+export const SHORT_DATE = 'Oct 27 - 9:00am SAST';
 export const FULL_DATE = 'Oct 27th 9am Pacific Time (GMT-7)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
