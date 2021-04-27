@@ -79,7 +79,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               )
             ) : (
               <>
-                Hi {username}, you're in.
+                You're in 👋🏽
               </>
             )}
           </h2>

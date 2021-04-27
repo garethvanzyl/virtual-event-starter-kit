@@ -69,7 +69,7 @@ export default function TicketCopy({ username }: Props) {
 
   return (
     <div className={cn(styles.wrapper, styleUtils.appear)}>
-      <div className={styles['label-wrapper']}>
+     {/*  <div className={styles['label-wrapper']}>
         <div className={styles.label}>Your ticket URL:</div>
         <div
           className={cn(styles['mobile-copy'], {
@@ -79,7 +79,7 @@ export default function TicketCopy({ username }: Props) {
           {copiedText}
           {copyButton}
         </div>
-      </div>
+      </div> */}
       <div
         className={cn(styles.field, {
           [styles['desktop-copy-disabled']]: !copyEnabled
