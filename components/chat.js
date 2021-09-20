@@ -4,8 +4,7 @@ import Cookies from 'js-cookie'
 import styles from './chat.module.css';
 import useStayScrolled from "react-stay-scrolled"; 
 import useInterval from "use-interval";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+
 
 const ENDPOINT = 'https://b00e7e427bae.up.railway.app';
 const socket = socketIOClient(ENDPOINT);
@@ -40,11 +39,11 @@ function Chat() {
     // subscribe a new user
     socket.emit('login', Cookies.get('name'));
     // list of connected users
-    socket.on('users', data => {
+    socket.on('users', (data) => {
       setUser({ usersList: JSON.parse(data) });
     });
     // we get the messages
-    socket.on('getMsg', data => {
+    socket.on('getMsg', (data) => {
       let listMessages = recMsg.listMsg;
       listMessages.push(JSON.parse(data));
       setRecMsg({ listMsg: listMessages });
@@ -56,7 +55,7 @@ function Chat() {
     socket.emit('sendMsg', JSON.stringify({ id: loggedUser.id, msg: msg }));
   };
   // get the logged user
-  socket.on('connecteduser', data => {
+  socket.on('connecteduser', (data) => {
     setLoggedUser(JSON.parse(data));
   });
   const divRef = useRef(null);

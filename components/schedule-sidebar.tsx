@@ -21,7 +21,7 @@ import styles from './schedule-sidebar.module.css';
 import Select from './select';
 import TalkCard from './talk-card';
 import { SHORT_DATE } from '@lib/constants';
-import Chat from '../components/chat'
+import Chat from '../components/chat.js'
 
 type Props = {
   allStages: Stage[];
