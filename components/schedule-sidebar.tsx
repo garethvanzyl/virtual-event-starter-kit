@@ -21,6 +21,7 @@ import styles from './schedule-sidebar.module.css';
 import Select from './select';
 import TalkCard from './talk-card';
 import { SHORT_DATE } from '@lib/constants';
+import Chat from '../components/chat'
 
 type Props = {
   allStages: Stage[];
@@ -37,9 +38,10 @@ export default function ScheduleSidebar({ allStages }: Props) {
 
   return (
     <div className={styles.schedule}>
+      <Chat />
       <h3 className={styles.header}>Schedule</h3>
       <p>{SHORT_DATE}</p>
-      <Select
+      {/* <Select
         aria-label="Select a stage"
         value={currentStageSlug}
         onChange={e => {
@@ -53,12 +55,15 @@ export default function ScheduleSidebar({ allStages }: Props) {
             {stage.name}
           </option>
         ))}
-      </Select>
+      </Select> */}
+      
       <div className={styles.talks}>
+      
         {currentStage?.schedule.map(talk => (
           <TalkCard key={talk.title} talk={talk} showTime />
         ))}
       </div>
+      
     </div>
   );
 }

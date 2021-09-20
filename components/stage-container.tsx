@@ -57,7 +57,7 @@ export default function StageContainer({ stage, allStages }: Props) {
                 <h2 className={styles.stageName}>{stage.name}</h2>
               </div>
               <DiscordChat stage={stage.slug} />
-              <a
+              {/* <a
                 href={updatedStage.discord}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,7 +65,7 @@ export default function StageContainer({ stage, allStages }: Props) {
               >
                 <span>Join the chat here</span>
                 
-              </a>
+              </a> */}
             </div>
           </div>
         ) : loginStatus === 'loading' ? null : (

@@ -16,6 +16,7 @@
 
 import { useState } from 'react';
 import cn from 'classnames';
+import Cookies from 'js-cookie';
 import useConfData from '@lib/hooks/use-conf-data';
 import { useRouter } from 'next/router';
 import FormError from '@lib/form-error';
@@ -84,7 +85,7 @@ export default function Form({ sharePage }: Props) {
                 name: name,
                 username: name
               };
-
+              Cookies.set('name', `${name}`)
               if (sharePage) {
                 const queryString = Object.keys(params)
                   .map(
@@ -141,7 +142,7 @@ export default function Form({ sharePage }: Props) {
             onChange={e => setName(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
-            placeholder="Enter your name to register"
+            placeholder="Enter your name"
             aria-label="Your name"
             required
           />
@@ -165,7 +166,7 @@ export default function Form({ sharePage }: Props) {
             onChange={e => setEmail(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
-            placeholder="Enter your email to register"
+            placeholder="Enter your email"
             aria-label="Your email address"
             required
           />
