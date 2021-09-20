@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import socketIOClient from 'socket.io-client';
-import userGen from 'username-generator';
 import Cookies from 'js-cookie'
 import styles from './chat.module.css';
 import useStayScrolled from "react-stay-scrolled"; 
@@ -39,7 +38,7 @@ function Chat() {
 
   useEffect(() => {
     // subscribe a new user
-    socket.emit('login', userGen.generateUsername());
+    socket.emit('login', Cookies.get('name'));
     // list of connected users
     socket.on('users', data => {
       setUser({ usersList: JSON.parse(data) });

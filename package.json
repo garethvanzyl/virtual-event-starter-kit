@@ -61,6 +61,7 @@
     "@types/cookie": "0.4.0",
     "@types/htmlescape": "1.1.1",
     "@types/ioredis": "4.17.9",
+    "@types/js-cookie": "^2.2.7",
     "@types/ms": "0.7.31",
     "@types/node": "12.19.8",
     "@types/node-fetch": "^2.5.10",
